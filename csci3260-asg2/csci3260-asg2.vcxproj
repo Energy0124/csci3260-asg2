@@ -80,8 +80,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Energy\Documents\Visual Studio 2015\Projects\csci3260-asg2\csci3260-asg2\Dependencies\glm;C:\Users\Energy\Documents\Visual Studio 2015\Projects\csci3260-asg2\csci3260-asg2\Dependencies\glew;C:\Users\Energy\Documents\Visual Studio 2015\Projects\csci3260-asg2\csci3260-asg2\Dependencies\freeglut;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -110,6 +114,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="submit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FragmentShader.glsl" />
+    <None Include="VertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

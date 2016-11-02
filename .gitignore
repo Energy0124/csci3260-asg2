@@ -240,3 +240,11 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+
+.vs
+Debug
+x64
+csci3260-asg2/Debug
+csci3260-asg2/x64
+csci3260-asg2.VC.VC.opendb
