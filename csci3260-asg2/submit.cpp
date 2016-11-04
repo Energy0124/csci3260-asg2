@@ -1106,6 +1106,8 @@ void initializedGL(void)
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
 	glEnable(GL_CULL_FACE);
+	glEnable(GL_MULTISAMPLE);
+	glutSetOption(GLUT_MULTISAMPLE, 4);
 	installShaders();
 	sendDataToOpenGL();
 	loadTexture();
@@ -1114,7 +1116,7 @@ void initializedGL(void)
 int main(int argc, char *argv[])
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
+	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE | GLUT_MULTISAMPLE);
 	//TODO:
 	//Create a window with title specified
 	glutInitWindowSize(WIDTH, HEIGHT);
